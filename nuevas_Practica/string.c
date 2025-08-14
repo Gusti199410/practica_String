@@ -55,13 +55,32 @@ char *mi_strrcat(char *destino, const char *origen, int caracteres)
 
 char *mi_strch(char *s1, int c)
 {
-    char error[20]="No se encontro el caracter";
     while (*s1!='\0')
     {
         if(*s1!= c)
         {
             s1++;
         }else return s1;
+    }
+    return NULL;
+}
+
+char *mi_strrch(char *s1, int c)
+{
+    int i=0;
+    char *inicio=s1;
+    while(*s1!='\0')
+    {
+        i++;
+        s1++;
+    }
+    char *fin=inicio+i;
+    while(inicio!=fin)
+    {
+        if(*fin!=c)
+        {
+            fin--;
+        }else return fin;
     }
     return NULL;
 
