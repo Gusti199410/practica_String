@@ -85,3 +85,36 @@ char *mi_strrch(char *s1, int c)
     return NULL;
 
 }
+
+bool es_Palindormo(const char *s1)
+{
+    int i=0;
+    char *inicio=s1;
+    while(*s1!='\0')
+    {
+        s1++;
+        i++;
+    }
+    char *fin=inicio+i;
+    while(inicio>fin)
+    {
+        if(*inicio==' ')
+        {
+            inicio++;
+        }
+        if(*fin==' ')
+        {
+            fin--;
+        }
+        if(*inicio==*fin)
+        {
+            inicio++;
+            fin--;
+        }else
+        {
+            return false;
+        }
+    }
+    return true;
+
+}
