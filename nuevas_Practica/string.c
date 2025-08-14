@@ -118,3 +118,25 @@ bool es_Palindormo(const char *s1)
     return true;
 
 }
+int funcio_Atoi(char *s1)
+{
+  int i=0,n=0;
+  char*aux=s1;
+  while(*s1!='\0')
+  {
+      s1++;
+      i++;
+  }
+  for(int j=0;j<i;j++)
+  {
+      char caracter=aux[j];
+      if(caracter<'0' || caracter>'9')
+      {
+          break;
+      }
+      n*=10;
+      n+=caracter-'0';
+  }
+return n;
+
+}
