@@ -3,12 +3,12 @@
 
 int main()
 {
-    char destino[10]="Holaaaaaaaaaaaaaaaaa";
+    char destino[30]="Hola";
     char origen[10]="mundo";
     ///copiar B en A
-    mi_strcpy(destino,origen);
+    unir_Cadena(destino,origen);
     printf("%s\n",destino);
-    printf("%s\n",origen);
+   //printf("%s\n",origen);
     return 0;
 
 

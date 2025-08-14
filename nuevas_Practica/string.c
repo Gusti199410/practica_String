@@ -2,16 +2,32 @@
 
 char * mi_strcpy(char *destino, const char *origin)
 {
-    char aux[]="";
+    char *aux=*destino;
     while(*origin!='\0')
     {
-        *aux=*origin;
+        *destino=*origin;
         origin++;
-        aux++;
+        destino++;
     }
-    *aux='\0';
-    *destino=*aux;
+    *destino='\0';
+    return aux;
+}
 
-    return destino;
-
+char *unir_Cadena(char *destino, const char *origen)
+{
+    char *aux=*destino;
+    while(*destino!='\0')
+    {
+        destino++;
+    }
+    *destino=' ';
+    destino++;
+    while(*origen!='\0')
+    {
+        *destino=*origen;
+        destino++;
+        origen++;
+    }
+    *destino='\0';
+    return aux;
 }
