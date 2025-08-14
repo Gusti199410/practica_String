@@ -6,7 +6,8 @@
 #include<string.h>
 
 char *mi_strcpy(char *destino, const char *origen);
-
+char *mi_strcat(char *destino, const char *origen);
+char *mi_strrcat(char *destino, const char *origen,int caracteres);
 
 
 
