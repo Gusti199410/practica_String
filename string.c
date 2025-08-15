@@ -86,7 +86,7 @@ char *mi_strrch(char *s1, int c)
 
 }
 
-bool es_Palindormo(const char *s1)
+bool es_Palindormo(char *s1)
 {
     int i=0;
     char *inicio=s1;
@@ -143,4 +143,30 @@ int mi_funcio_Atoi(const char *s1)
     return numero*neg;
 }
 
-
+char *copia_Cadena(const char *s1)
+{
+    char *destino=malloc(mi_strlen(*s1)+1);
+    char *aux= destino;
+    if(!destino)
+    {
+        return NULL;
+    }
+    while(*s1!='\0')
+    {
+        *destino=*s1;
+        s1++;
+        destino++;
+    }
+    *destino=*s1;
+    return aux;
+}
+int mi_strlen(char *s1)
+{
+    int num=0;
+    while(*s1!='\0')
+    {
+        s1++;
+        num++;
+    }
+    return num;
+}

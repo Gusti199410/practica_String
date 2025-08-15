@@ -2,11 +2,13 @@
 
 int main()
 {
-    char destino[30];
+    char origen[15]="Hola mundo!";
+    int numero=mi_strlen(origen);
+    char *destino=copia_Cadena(origen);
+    printf("%s",destino);
+    //printf("%d",mi_funcio_Atoi(origen));
 
-    char origen[30]="-42a";
-
-    printf("%d",mi_funcio_Atoi(origen));
+    free(origen);
 
     return 0;
 }
