@@ -8,7 +8,7 @@ int main()
     printf("%s",destino);
     //printf("%d",mi_funcio_Atoi(origen));
 
-    free(origen);
+    free(destino);
 
     return 0;
 }

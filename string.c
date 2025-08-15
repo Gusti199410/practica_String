@@ -145,7 +145,7 @@ int mi_funcio_Atoi(const char *s1)
 
 char *copia_Cadena(const char *s1)
 {
-    char *destino=malloc(mi_strlen(*s1)+1);
+    char *destino=malloc(mi_strlen(s1)+1);
     char *aux= destino;
     if(!destino)
     {
