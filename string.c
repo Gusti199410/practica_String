@@ -1,0 +1,150 @@
+#include "string.h"
+
+char * mi_strcpy(char *destino, const char *origin)
+{
+    char *aux=destino;
+    while(*origin!='\0')
+    {
+        *destino=*origin;
+        origin++;
+        destino++;
+    }
+    *destino='\0';
+    return aux;
+}
+
+char *mi_strcat(char *destino, const char *origen)
+{
+    char *aux= destino;
+    while(*destino!='\0')
+    {
+        destino++;
+    }
+    *destino=' ';
+    destino++;
+    while(*origen!='\0')
+    {
+        *destino=*origen;
+        destino++;
+        origen++;
+    }
+    *destino='\0';
+    return aux;
+}
+char *mi_strrcat(char *destino, const char *origen, int caracteres)
+{
+    int i=0;
+    char *aux = destino;
+    while(*destino!='\0')
+    {
+        destino++;
+    }
+    *destino=' ';
+    destino++;
+    while(*origen!='\0' && caracteres!=i)
+    {
+        *destino=*origen;
+        destino++;
+        origen++;
+        i++;
+    }
+    *destino='\0';
+    return aux;
+
+}
+
+char *mi_strch(char *s1, int c)
+{
+    while (*s1!='\0')
+    {
+        if(*s1!= c)
+        {
+            s1++;
+        }else return s1;
+    }
+    return NULL;
+}
+
+char *mi_strrch(char *s1, int c)
+{
+    int i=0;
+    char *inicio=s1;
+    while(*s1!='\0')
+    {
+        i++;
+        s1++;
+    }
+    char *fin=inicio+i;
+    while(inicio!=fin)
+    {
+        if(*fin!=c)
+        {
+            fin--;
+        }else return fin;
+    }
+    return NULL;
+
+}
+
+bool es_Palindormo(const char *s1)
+{
+    int i=0;
+    char *inicio=s1;
+    while(*s1!='\0')
+    {
+        s1++;
+        i++;
+    }
+    char *fin=inicio+i;
+    while(inicio>fin)
+    {
+        if(*inicio==' ')
+        {
+            inicio++;
+        }
+        if(*fin==' ')
+        {
+            fin--;
+        }
+        if(*inicio==*fin)
+        {
+            inicio++;
+            fin--;
+        }else
+        {
+            return false;
+        }
+    }
+    return true;
+
+}
+int funcio_Atoi(char *s1)
+{
+  int i=0,n=0,neg=1;
+  char*aux=s1;
+  while(*s1!='\0')
+  {
+      s1++;
+      i++;
+  }
+  for(int j=0;j<i;j++)
+  {
+      char caracter=aux[j];
+      if(caracter<'0' || caracter>'9' || caracter!='-')
+      {
+          break;
+
+      }else if(caracter=='-')
+      {
+          neg=-1;
+      }
+      n*=10;
+      n+=caracter-'0';
+  }
+return n*neg;
+}
+
+char *mi_itoa(int numero)
+{
+
+}

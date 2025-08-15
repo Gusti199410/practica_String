@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1755216676 source:c:\users\thebestgus\desktop\repositorio\practica_string\nuevas_practica\string.c
+	"string.h"
+
+1755179416 c:\users\thebestgus\desktop\repositorio\practica_string\nuevas_practica\string.h
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+
+1755216706 source:c:\users\thebestgus\desktop\repositorio\practica_string\nuevas_practica\main.c
+	"string.h"
+
