@@ -2,7 +2,7 @@
 
 int main()
 {
-    char destino[30]="4265a4";
+    char destino[30]="-4265a4";
     char origen[10]="mundo";
     char c='5';
     ///copiar B en A

@@ -130,15 +130,16 @@ int funcio_Atoi(char *s1)
   for(int j=0;j<i;j++)
   {
       char caracter=aux[j];
-      if(caracter<'0' || caracter>'9' || caracter!='-')
-      {
-          break;
-
-      }else if(caracter=='-')
+      if(caracter=='-')
       {
           neg=-1;
       }
-      n*=10;
+      if(caracter<'0' || caracter>'9' && caracter!='-')
+      {
+          break;
+
+      }
+      n*=10*neg;
       n+=caracter-'0';
   }
 return n*neg;
