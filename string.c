@@ -118,34 +118,29 @@ bool es_Palindormo(const char *s1)
     return true;
 
 }
-int funcio_Atoi(char *s1)
+int mi_funcio_Atoi(const char *s1)
 {
-  int i=0,n=0,neg=1;
-  char*aux=s1;
-  while(*s1!='\0')
-  {
-      s1++;
-      i++;
-  }
-  for(int j=0;j<i;j++)
-  {
-      char caracter=aux[j];
-      if(caracter=='-')
-      {
-          neg=-1;
-      }
-      if(caracter<'0' || caracter>'9' && caracter!='-')
-      {
-          break;
+    int numero,neg=1;
+    if(*s1==' '|| *s1=='\0')
+    {
+        s1++;
+    }
+    if(*s1=='-')
+    {
+        neg=-1;
+        s1++;
+    }
+    if(*s1=='+')
+    {
+        s1++;
+    }
+    while(*s1>='0' && *s1<='9')
+    {
+        numero=numero*10+(*s1-'0');
+        s1++;
+    }
 
-      }
-      n*=10*neg;
-      n+=caracter-'0';
-  }
-return n*neg;
+    return numero*neg;
 }
 
-char *mi_itoa(int numero)
-{
 
-}

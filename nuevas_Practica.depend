@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1755219079 source:c:\users\thebestgus\desktop\repositorio\practica_string\nuevas_practica\string.c
+1755265158 source:c:\users\thebestgus\desktop\repositorio\practica_string\nuevas_practica\string.c
 	"string.h"
 
 1755179416 c:\users\thebestgus\desktop\repositorio\practica_string\nuevas_practica\string.h
@@ -8,6 +8,6 @@
 	<stdbool.h>
 	<string.h>
 
-1755218873 source:c:\users\thebestgus\desktop\repositorio\practica_string\nuevas_practica\main.c
+1755265152 source:c:\users\thebestgus\desktop\repositorio\practica_string\nuevas_practica\main.c
 	"string.h"
 
